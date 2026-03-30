@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="case-study">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      try {
+        if (sessionStorage.getItem("portfolio_auth") === "1") return;
+      } catch (e) {}
+      document.documentElement.setAttribute("data-portfolio-gate", "on");
+    })();
+  </script>
+  <style>
+    html[data-portfolio-gate="on"] body > *:not(#portfolio-auth-gate) {
+      visibility: hidden !important;
+    }
+  </style>
+  <link rel="stylesheet" href="../auth.css" />
+  <title>Highspot · Agent Center | Sushmidha Jawahar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-study">
+
+  <nav id="main-nav" class="light">
+    <a href="../index.html#hero" class="nav-logo" aria-label="Sushmidha Jawahar, home">
+      <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="logo-circle" cx="21" cy="21" r="21" />
+        <text class="logo-text" x="21" y="21" dominant-baseline="central" text-anchor="middle"
+              font-family="'DM Sans', sans-serif" font-size="19.5" font-weight="700"
+              letter-spacing="-0.5">.sj</text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work-1">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="cs-hero-project">
+    <div class="cs-hero-inner">
+      <div class="cs-hero-copy">
+        <div class="ws-num">01 / 03</div>
+        <div class="ws-label">Sales enablement · B2B SaaS</div>
+        <h1 class="ws-title">Highspot<br />Agent Center</h1>
+        <p class="ws-desc">Led end-to-end UX for Highspot's Agent Platform. Owned the interaction framework adopted across 8 product teams, and created a new design language for agentic expression on top of the existing design system. Scaled to 28 agentic scenarios across the platform.</p>
+        <div class="ws-tags">
+          <span class="ws-tag">Design System</span>
+          <span class="ws-tag">0 to 1 Design</span>
+          <span class="ws-tag">Web &amp; Mobile</span>
+          <span class="ws-tag">Framework</span>
+        </div>
+        <a class="cs-back" href="../index.html#work-1">← All work</a>
+      </div>
+      <aside class="cs-meta" aria-label="Project details">
+        <div class="cs-meta-item">
+          <label>Role</label>
+          <p>Product Designer, Agents Platform</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Timeline</label>
+          <p>Mar 2025 to present</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Team</label>
+          <p>Design Systems SPD, PM, 7 platform engineers, 4 AI/ML engineers</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Scope</label>
+          <p>0 to 1 Feature area, Design system updates, AI Interaction patterns</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div class="cs-body-shell">
+  <div class="cs-cover">
+    <div class="cs-cover-frame">
+      <img src="../images/agent-center.svg" alt="Highspot Agent Center interface" width="946" height="672" decoding="async" />
+    </div>
+    <div class="cs-cover-caption">
+      <span>Agent Center · Highspot's agentic AI platform</span>
+      <span>Highspot · 2025</span>
+    </div>
+  </div>
+
+  <section class="cs-section-block" aria-labelledby="ctx-title">
+    <div class="cs-block-header">
+      <span class="cs-block-num" aria-hidden="true">01</span>
+      <h2 id="ctx-title" class="cs-block-title">The context</h2>
+    </div>
+    <div class="cs-two-col">
+      <div>
+        <p class="cs-body-para">
+          <strong>Agent Center</strong> brings specialist AI agents to sales enablement: strategy, GTM, and revenue workflows through conversational AI.
+        </p>
+        <p class="cs-body-para">
+          I focused on <strong>preventing design drift</strong> as scope grew: every new agent and capability needed to feel like <strong>one product</strong>, not eight.
+        </p>
+      </div>
+      <div>
+        <p class="cs-body-para">
+          That meant <strong>strategy and systems in parallel</strong>: principles for the whole platform, plus reusable patterns so teams could ship fast without fragmenting the experience.
+        </p>
+        <p class="cs-body-para">
+          The aim: a <strong>purposeful</strong> AI product with a <strong>clear domain identity</strong>, not a generic model bolted onto existing UI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section-block" aria-labelledby="chal-title">
+    <div class="cs-block-header">
+      <span class="cs-block-num" aria-hidden="true">02</span>
+      <h2 id="chal-title" class="cs-block-title">The design challenges</h2>
+    </div>
+    <p class="cs-intro-line">Two tensions drove most decisions.</p>
+    <div class="cs-challenge-grid">
+      <article class="cs-challenge-card">
+        <span class="cs-challenge-num">I Challenge</span>
+        <h3 class="cs-challenge-title">Futuristic vision, shared foundation</h3>
+        <p class="cs-challenge-text">Agent Center had to feel forward-looking while still evolving from Highspot's existing system: <strong>not a visual break</strong>, a coherent next step.</p>
+      </article>
+      <article class="cs-challenge-card">
+        <span class="cs-challenge-num">II Challenge</span>
+        <h3 class="cs-challenge-title">Flexibility without fragmentation</h3>
+        <p class="cs-challenge-text">Frameworks had to give each specialist team room to solve their problems without the experience splintering across <strong>eight agents</strong> for the same user.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="cs-section-block" aria-labelledby="built-title">
+    <div class="cs-block-header">
+      <span class="cs-block-num" aria-hidden="true">03</span>
+      <h2 id="built-title" class="cs-block-title">What I built</h2>
+    </div>
+
+    <blockquote class="cs-pull-quote">
+      <p class="cs-pull-quote-label">Design leadership</p>
+      <p class="cs-pull-quote-text">
+        I established the <strong>language</strong>, <strong>interaction principles</strong>, and <strong>capability frameworks</strong> that gave Agent Center coherence and scale, architected to compound over time.
+      </p>
+    </blockquote>
+
+    <div class="cs-framework-grid">
+      <article class="cs-framework-card">
+        <span class="cs-framework-label">Framework 01</span>
+        <h3 class="cs-framework-title">Intent recognition</h3>
+        <p class="cs-framework-text">How each agent maps signals to <strong>context-aware responses</strong>, the base for how all agents interpret intent across multi-turn flows.</p>
+      </article>
+      <article class="cs-framework-card">
+        <span class="cs-framework-label">Framework 02</span>
+        <h3 class="cs-framework-title">Response</h3>
+        <p class="cs-framework-text">Patterns and structures for a <strong>consistent voice</strong> so switching agents feels like different experts, not different products.</p>
+      </article>
+      <article class="cs-framework-card">
+        <span class="cs-framework-label">Framework 03</span>
+        <h3 class="cs-framework-title">Convergence</h3>
+        <p class="cs-framework-text"><strong>Human-in-the-loop</strong> handoffs for collaborative creation, the reusable spine behind live creation scenarios.</p>
+      </article>
+    </div>
+
+    <div class="cs-after-framework">
+      <p class="cs-body-para">
+        With visual design and foundations, I extended <strong>Polar UI</strong> with an <strong>agentic layer</strong>: libraries and interaction standards built for agent experiences, not a from-scratch system.
+      </p>
+    </div>
+  </section>
+
+  <section class="cs-section-block" aria-labelledby="impact-title">
+    <div class="cs-block-header">
+      <span class="cs-block-num" aria-hidden="true">04</span>
+      <h2 id="impact-title" class="cs-block-title">Business impact</h2>
+    </div>
+
+    <div class="cs-stat-grid">
+      <article class="cs-stat-card">
+        <span class="cs-stat-overline">AI design leadership</span>
+        <span class="cs-stat-num">1st</span>
+        <h3 class="cs-stat-heading">Agentic design vision</h3>
+        <p class="cs-stat-body">Defined patterns and principles so Highspot reads as <strong>purposeful AI</strong>, adopted broadly across product teams.</p>
+      </article>
+      <article class="cs-stat-card">
+        <span class="cs-stat-overline">Specialist agents</span>
+        <span class="cs-stat-num">8</span>
+        <h3 class="cs-stat-heading">Enabled by the frameworks</h3>
+        <p class="cs-stat-body"><strong>Intent, response, and convergence</strong> gave eight agents coherent, context-aware behavior for distinct enablement jobs.</p>
+      </article>
+      <article class="cs-stat-card">
+        <span class="cs-stat-overline">Human-in-the-loop</span>
+        <span class="cs-stat-num">27</span>
+        <h3 class="cs-stat-heading">Creation scenarios live</h3>
+        <p class="cs-stat-body">One <strong>reusable pattern</strong> across workflows; more scenarios on the roadmap for the year.</p>
+      </article>
+
+      <article class="cs-stat-wide">
+        <div class="cs-stat-wide-figure">
+          <span class="cs-stat-num">5mo</span>
+          <span class="cs-stat-wide-unit">D&amp;E debt cut</span>
+        </div>
+        <div class="cs-stat-wide-text">
+          <span class="cs-stat-overline">Design system</span>
+          <h3 class="cs-stat-heading">Agentic layer on Polar UI</h3>
+          <p class="cs-stat-body">Extending <strong>Polar</strong> instead of greenfield work avoided months of duplicate foundation effort; <strong>libraries and standards</strong> shipped faster and spread across surfaces.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="cs-confidential-wrap">
+    <div class="cs-confidential-split">
+      <div>
+        <h2 class="cs-confidential-heading">The full work<br />is <strong>confidential.</strong></h2>
+        <p class="cs-confidential-lede">
+          <strong>Artifacts, specs, and documentation</strong> aren't public. There's more depth than this page can show.
+        </p>
+        <p class="cs-confidential-lede">
+          I'm glad to walk through <strong>frameworks</strong>, the <strong>agentic layer on Polar</strong>, and <strong>HITL flows</strong> in a 1:1 conversation.
+        </p>
+        <a class="cs-cta" href="mailto:sushmidha.j@gmail.com">Email sushmidha.j@gmail.com</a>
+      </div>
+      <div class="cs-preview-card">
+        <span class="cs-preview-label">What a conversation can cover</span>
+        <ul class="cs-preview-list">
+          <li><strong>Framework docs:</strong> how the three frameworks are documented and used by teams today</li>
+          <li><strong>Polar extension:</strong> component library and interaction specs</li>
+          <li><strong>HITL patterns</strong> behind creation scenarios</li>
+          <li><strong>Multi-turn guidelines</strong> and selected process artifacts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer>
+    <span class="footer-copy">Sushmidha Jawahar, Senior Product Designer</span>
+    <span class="footer-copy">2026</span>
+  </footer>
+
+  <script>
+    (function () {
+      var nav = document.getElementById('main-nav');
+      var hero = document.querySelector('.cs-hero-project');
+      var footer = document.querySelector('footer');
+      if (!nav) return;
+      function syncNav() {
+        var els = [hero, footer].filter(Boolean);
+        var overDark = els.some(function (el) {
+          var r = el.getBoundingClientRect();
+          return r.top <= 60 && r.bottom > 60;
+        });
+        nav.classList.toggle('light', overDark);
+      }
+      syncNav();
+      window.addEventListener('scroll', syncNav, { passive: true });
+      window.addEventListener('resize', syncNav);
+    })();
+  </script>
+  <script src="../auth.js"></script>
+</body>
+</html>

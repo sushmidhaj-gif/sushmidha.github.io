@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="case-study">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      try {
+        if (sessionStorage.getItem("portfolio_auth") === "1") return;
+      } catch (e) {}
+      document.documentElement.setAttribute("data-portfolio-gate", "on");
+    })();
+  </script>
+  <style>
+    html[data-portfolio-gate="on"] body > *:not(#portfolio-auth-gate) {
+      visibility: hidden !important;
+    }
+  </style>
+  <link rel="stylesheet" href="../auth.css" />
+  <title>Vendia · Usage Dashboards | Sushmidha Jawahar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-study">
+
+  <nav id="main-nav">
+    <a href="../index.html#hero" class="nav-logo" aria-label="Sushmidha Jawahar, home">
+      <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="logo-circle" cx="21" cy="21" r="21" />
+        <text class="logo-text" x="21" y="21" dominant-baseline="central" text-anchor="middle"
+              font-family="'DM Sans', sans-serif" font-size="19.5" font-weight="700"
+              letter-spacing="-0.5">.sj</text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work-2">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="cs-hero-project cs-hero-project--mauve">
+    <div class="cs-hero-inner">
+      <div class="cs-hero-copy">
+        <div class="ws-num">02 / 03</div>
+        <div class="ws-label">Data management w/ blockchain · B2B SaaS</div>
+        <h1 class="ws-title">Vendia —<br />Usage Dashboards</h1>
+        <p class="ws-desc">Designed self-serve billing and usage dashboards that replaced manual monthly reports — giving enterprise clients real-time visibility into their data consumption for the first time.</p>
+        <div class="ws-tags">
+          <span class="ws-tag">Dashboards</span>
+          <span class="ws-tag">Data visualization</span>
+          <span class="ws-tag">0 to 1 Design</span>
+        </div>
+        <a class="cs-back" href="../index.html#work-2">← All work</a>
+      </div>
+      <aside class="cs-meta" aria-label="Project details">
+        <div class="cs-meta-item">
+          <label>Role</label>
+          <p>Product Designer (solo)</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Timeline</label>
+          <p>Jun – Sep 2023 · 4 months</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Team</label>
+          <p>PM, Solution Architect, 2 Engineers</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Scope</label>
+          <p>Research · Tooling · Visualization · Systems · Testing</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div class="cs-body-shell">
+    <div class="cs-cover">
+      <div class="cs-cover-frame">
+        <img src="https://static.wixstatic.com/media/3f58e7_fec553e907c64a99abd302054a9adb0a~mv2.jpg" alt="Vendia consumption and billing dashboard UI" width="946" height="672" decoding="async" />
+      </div>
+      <div class="cs-cover-caption">
+        <span>Final dashboard UI — Usage and Billing views</span>
+        <span>Vendia Share · 2023</span>
+      </div>
+    </div>
+
+    <section class="cs-section-block" aria-labelledby="problem-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">01</span>
+        <h2 id="problem-title" class="cs-block-title">The problem</h2>
+      </div>
+      <div class="cs-two-col">
+        <div>
+          <p class="cs-body-para">
+            Vendia Share's pricing model charges clients based on platform activity — reads, writes, shares, subscriptions, and storage across their network of nodes. But clients had no way to see this data themselves.
+          </p>
+          <p class="cs-body-para">
+            Every billing query required a support ticket, fielded manually by solution architects. As Vendia transitioned to a credit-based model, this process became unsustainable — clients couldn't predict spend, couldn't optimize usage, and couldn't make informed budget decisions.
+          </p>
+        </div>
+        <div class="cs-challenge-grid">
+          <article class="cs-challenge-card">
+            <span class="cs-challenge-num">Before</span>
+            <h3 class="cs-challenge-title">How it worked</h3>
+            <p class="cs-challenge-text">Monthly PDF invoices emailed post-billing.</p>
+            <p class="cs-challenge-text">No real-time consumption visibility.</p>
+            <p class="cs-challenge-text">Every query routed through support tickets.</p>
+            <p class="cs-challenge-text">Manual work for solution architects each month.</p>
+          </article>
+          <article class="cs-challenge-card">
+            <span class="cs-challenge-num">After</span>
+            <h3 class="cs-challenge-title">What we shipped</h3>
+            <p class="cs-challenge-text">Self-serve dashboard, live consumption data.</p>
+            <p class="cs-challenge-text">Credit and cost visibility at Uni / node level.</p>
+            <p class="cs-challenge-text">Zero support ticket overhead for billing queries.</p>
+            <p class="cs-challenge-text">Budget forecasting enabled for the first time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="research-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">02</span>
+        <h2 id="research-title" class="cs-block-title">Research &amp; discovery</h2>
+      </div>
+      <div class="cs-two-col">
+        <div>
+          <p class="cs-body-para">
+            I ran 5 stakeholder interviews, 3 user interviews, and a cross-functional design workshop — targeting two distinct audiences with very different goals.
+          </p>
+          <p class="cs-body-para">
+            <strong>Business leaders</strong> needed portfolio-level cost summaries to plan budgets and justify spend to their organizations. <strong>Engineers</strong> needed granular, node-level breakdowns to detect anomalies and understand usage patterns in real time.
+          </p>
+          <p class="cs-body-para">
+            This tension — summary vs. granularity — became the central design constraint I had to resolve without overwhelming either group.
+          </p>
+        </div>
+        <div>
+          <div class="cs-cover-frame">
+            <img src="https://static.wixstatic.com/media/3f58e7_ecb63881cc9f4511b9b804a497210cb4f000.jpg" alt="Design workshop artifact from cross-functional alignment session" width="946" height="672" decoding="async" />
+          </div>
+          <p class="cs-media-caption">Design workshop artifact — cross-functional alignment session</p>
+        </div>
+      </div>
+
+      <div class="cs-framework-grid">
+        <article class="cs-framework-card">
+          <span class="cs-framework-label">Key finding</span>
+          <h3 class="cs-framework-title">Credit ≠ cost (yet)</h3>
+          <p class="cs-framework-text">Users understood &ldquo;activities&rdquo; but not how they mapped to credits or dollars. The translation layer needed to be explicit in the UI, not assumed.</p>
+        </article>
+        <article class="cs-framework-card">
+          <span class="cs-framework-label">Key finding</span>
+          <h3 class="cs-framework-title">Prediction is the goal</h3>
+          <p class="cs-framework-text">Users didn't just want to see past spend — they wanted to forecast future usage to stay within budget. Historical data needed a forward-looking frame.</p>
+        </article>
+        <article class="cs-framework-card">
+          <span class="cs-framework-label">Key finding</span>
+          <h3 class="cs-framework-title">Portfolios get complex fast</h3>
+          <p class="cs-framework-text">Large clients manage dozens of Unis and Nodes. Any design that surfaced entity-level data had to scale gracefully or it would collapse under real-world complexity.</p>
+        </article>
+      </div>
+
+      <blockquote class="cs-pull-quote">
+        <p class="cs-pull-quote-label">How might we</p>
+        <p class="cs-pull-quote-text">&ldquo;How might we create a consumption dashboard that supports the changing pricing structure, while being flexible to accommodate users with different engagement models?&rdquo;</p>
+      </blockquote>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="pivots-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">03</span>
+        <h2 id="pivots-title" class="cs-block-title">Three pivots that shaped the design</h2>
+      </div>
+      <p class="cs-intro-line">Rather than one linear path to a solution, this project was defined by three inflection points — moments where early assumptions broke and the design had to evolve.</p>
+
+      <div>
+        <span class="cs-framework-label">Pivot 01</span>
+        <h3 class="cs-framework-title">From one dashboard to two</h3>
+        <div class="cs-two-col">
+          <div>
+            <p class="cs-body-para">
+              The first iteration combined activity data and billing data on a single screen. It looked complete on paper, but usability testing exposed a fundamental conflict: <em>usage metrics (counts of reads/writes)</em> and <em>financial metrics (credits, currency)</em> operate on completely different cognitive registers. Users couldn't orient themselves.
+            </p>
+            <p class="cs-body-para">
+              I made the call to split the experience into two purpose-built dashboards: <strong>Consumption</strong> (what did I do?) and <strong>Billing</strong> (what did it cost?). This added scope — but resolved the core confusion and made both views significantly more useful.
+            </p>
+          </div>
+          <div>
+            <div class="cs-cover-frame">
+              <img src="https://static.wixstatic.com/media/3f58e7_7e040088dd804863a6a3a8b977a5ecb1~mv2.png" alt="Early dashboard iteration mixing usage and billing metrics" width="946" height="672" decoding="async" />
+            </div>
+            <p class="cs-media-caption">Iteration 1 — mixed metrics causing orientation issues</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-stack-divider">
+        <span class="cs-framework-label">Pivot 02</span>
+        <h3 class="cs-framework-title">Evaluating six visualization tools — then building within constraints</h3>
+        <div class="cs-two-col">
+          <div>
+            <div class="cs-cover-frame">
+              <img src="https://static.wixstatic.com/media/3f58e7_9363e2e0fd24445382730da075a05ccf~mv2.png" alt="Dashboard iteration with toolbar for data slicing" width="946" height="672" decoding="async" />
+            </div>
+            <p class="cs-media-caption">Iteration 2 — toolbar component enabling data slicing</p>
+          </div>
+          <div>
+            <p class="cs-body-para">
+              Before designing a single chart, I evaluated six data visualization tools (Tableau, DOMO, Mode, and others) against a rigorous set of requirements: white-labeling capability, Vendia's RBAC logic, row/field-level access control, query performance, and accessibility.
+            </p>
+            <p class="cs-body-para">
+              I prototyped initial visualizations in DOMO using real client data — which gave stakeholders something concrete to react to early. When the engineering team ultimately built the final implementation natively, my DOMO prototypes served as the functional specification. The tool evaluation process also surfaced a critical constraint: the visualization layer needed to mirror Vendia's permissions model exactly, which shaped how I structured every filter interaction.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-stack-divider">
+        <span class="cs-framework-label">Pivot 03</span>
+        <h3 class="cs-framework-title">Solving the &ldquo;too many entities&rdquo; problem with a toolbar system</h3>
+        <p class="cs-body-para">
+          Providing granular data by Uni and Node was a firm stakeholder requirement. But Iteration 2 revealed a usability ceiling: clients managing 20+ Unis found the entity-level views overwhelming and unusable.
+        </p>
+        <p class="cs-body-para">
+          The solution was a new <strong>Toolbar component</strong> I designed for the existing design system — a persistent, context-aware filtering layer that let users slice to any entity without losing their place in the dashboard. I documented 5 component states with detailed specifications, enabling engineering to implement it directly into the product library. This became the architectural foundation for both dashboards.
+        </p>
+        <div class="cs-cover-frame cs-media-gap">
+          <img src="https://static.wixstatic.com/media/3f58e7_16b081458fc54ea19fa9fbabe5a67bda~mv2.png" alt="Toolbar component — five documented states for the design system" width="946" height="672" decoding="async" />
+        </div>
+        <p class="cs-media-caption">Toolbar component — 5 states, full design system documentation</p>
+        <div class="cs-cover-frame cs-media-gap">
+          <img src="https://static.wixstatic.com/media/3f58e7_ff45493dfa4f4056b828014d03033f3e~mv2.png" alt="Toolbar selection states for Uni and Node variants" width="946" height="672" decoding="async" />
+        </div>
+        <p class="cs-media-caption">Selection interaction states — Uni(s) &amp; Node(s) toolbar variants</p>
+      </div>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="final-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">04</span>
+        <h2 id="final-title" class="cs-block-title">Final solution</h2>
+      </div>
+      <p class="cs-prose">
+        The final design delivered two purpose-built dashboards — Consumption and Billing — unified by the Toolbar component. Explore the interactive prototype below.
+      </p>
+      <div class="cs-prototype-embed cs-media-gap">
+        <iframe title="Figma prototype — Vendia consumption and billing dashboards" height="675" src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FYFstBWbCjCHxaQCsYFi6AK%2FAll-things-vendia%3Fpage-id%3D1%253A14764%26type%3Ddesign%26node-id%3D1-22848%26viewport%3D2890%252C4162%252C0.4%26t%3DmQaFMd3yEyAnxqU7-1%26scaling%3Dscale-down-width%26starting-point-node-id%3D1%253A22848%26mode%3Ddesign" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="highlights-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">05</span>
+        <h2 id="highlights-title" class="cs-block-title">Solution highlights</h2>
+      </div>
+      <div class="cs-two-col">
+        <div>
+          <div class="cs-cover-frame">
+            <img src="https://static.wixstatic.com/media/3f58e7_fef20c2049cf4d0d89272a7baab65ca7~mv2.png" alt="Table component with bidirectional scrolling" width="946" height="672" decoding="async" />
+          </div>
+          <p class="cs-media-caption">Table component — bidirectional scrolling, spreadsheet-familiar patterns</p>
+        </div>
+        <div>
+          <h3 class="cs-framework-title">Familiarity as a design principle</h3>
+          <p class="cs-body-para">
+            The core table component was designed to mirror spreadsheet conventions — bidirectional scrolling, sortable columns, and inline comparisons. This was a deliberate choice: the primary users were finance and engineering teams fluent in Excel. Reducing the learning curve was as important as the data itself.
+          </p>
+        </div>
+      </div>
+      <div class="cs-two-col cs-stack-divider">
+        <div>
+          <h3 class="cs-framework-title">Share Summary — the uniquely Vendia view</h3>
+          <p class="cs-body-para">
+            One visualization had no equivalent in competing tools: the Share Summary, surfacing who shared data with whom, and which nodes participated in each exchange. This directly reflected Vendia's core value proposition and gave users a uniquely meaningful view of their network activity — not just raw counts.
+          </p>
+        </div>
+        <div>
+          <div class="cs-cover-frame">
+            <img src="https://static.wixstatic.com/media/3f58e7_68b00419b2444964badc90124f20d74d~mv2.png" alt="Share Summary network visualization" width="946" height="672" decoding="async" />
+          </div>
+          <p class="cs-media-caption">Share Summary — network-level data sharing visualization</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="impact-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">06</span>
+        <h2 id="impact-title" class="cs-block-title">Business impact</h2>
+      </div>
+      <div class="cs-two-col">
+        <article class="cs-stat-card">
+          <span class="cs-stat-overline">Cost reduction</span>
+          <span class="cs-stat-num">$250K</span>
+          <h3 class="cs-stat-heading">Reduced project cost</h3>
+          <p class="cs-stat-body">Tight engineering collaboration from day one meant zero rework at handoff. Developers participated throughout the design sprint — not just at the end — enabling seamless, direct implementation of complex data visualizations.</p>
+        </article>
+        <article class="cs-stat-card">
+          <span class="cs-stat-overline">Scope efficiency</span>
+          <span class="cs-stat-num">50%</span>
+          <h3 class="cs-stat-heading">2 dashboards, 1 project budget</h3>
+          <p class="cs-stat-body">By solving usage and billing within a single design project, the team got two purpose-built products for the cost of one — cutting both budget and delivery effort by half compared to running them separately.</p>
+        </article>
+      </div>
+
+      <div class="cs-stat-grid" style="margin-top: 12px;">
+        <article class="cs-stat-card cs-stat-card--light">
+          <span class="cs-stat-overline">Visibility</span>
+          <span class="cs-stat-num">100%</span>
+          <h3 class="cs-stat-heading">Full usage visibility</h3>
+          <p class="cs-stat-body">For the first time, clients owned their consumption data — no more month-end surprises, no more support tickets to get basic billing answers.</p>
+        </article>
+        <article class="cs-stat-card cs-stat-card--light">
+          <span class="cs-stat-overline">Operations</span>
+          <span class="cs-stat-num">80%</span>
+          <h3 class="cs-stat-heading">Saved for the delivery team</h3>
+          <p class="cs-stat-body">Solution Architects spent 80% less time fielding manual billing queries. Budget conversations became self-serve — the dashboard did the explaining.</p>
+        </article>
+        <article class="cs-stat-card cs-stat-card--light">
+          <span class="cs-stat-overline">Design system</span>
+          <span class="cs-stat-num">3</span>
+          <h3 class="cs-stat-heading">Components approved</h3>
+          <p class="cs-stat-body">Three new components — documented across 5 states each — were approved into the product library, extending impact well beyond this single project.</p>
+        </article>
+      </div>
+
+      <blockquote class="cs-pull-quote">
+        <p class="cs-pull-quote-label">User impact</p>
+        <p class="cs-pull-quote-text">&ldquo;For the first time, clients could optimize their credit spend themselves — seeing what drove cost, where to cut, and how to get more value from the platform. That's a fundamentally different relationship with the product.&rdquo;</p>
+      </blockquote>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="reflections-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">07</span>
+        <h2 id="reflections-title" class="cs-block-title">Reflections</h2>
+      </div>
+      <div class="cs-challenge-grid">
+        <article class="cs-framework-card">
+          <h3 class="cs-framework-title">Embed with engineering early</h3>
+          <p class="cs-framework-text">Weekly syncs with developers from week one meant technical constraints surfaced during ideation — not during handoff. When the DOMO prototype gave way to native implementation, there were no surprises. This kind of collaboration isn't a nice-to-have; it's how complex data products actually get built well.</p>
+        </article>
+        <article class="cs-framework-card">
+          <h3 class="cs-framework-title">Real data reveals what mockups hide</h3>
+          <p class="cs-framework-text">Prototyping in DOMO with an actual client's usage data exposed edge cases and scale problems that lorem ipsum never would have. Testing against the messiness of real-world data earlier — even imperfectly — saved significant rework downstream.</p>
+        </article>
+      </div>
+      <div class="cs-challenge-grid" style="margin-top: 14px;">
+        <article class="cs-framework-card">
+          <h3 class="cs-framework-title">Splitting scope can be the right call</h3>
+          <p class="cs-framework-text">Separating one dashboard into two felt like scope expansion. But it was the right design decision — and selling it required stakeholder alignment built on research evidence, not instinct alone. Advocating for complexity when the user need justifies it is a senior designer skill.</p>
+        </article>
+        <article class="cs-framework-card">
+          <h3 class="cs-framework-title">Design system contributions compound</h3>
+          <p class="cs-framework-text">The 3 components I contributed to the design system weren't just project deliverables — they became reusable infrastructure. Designing with the library's future in mind, not just the immediate screen, is how individual design work multiplies across the product.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="next-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">08</span>
+        <h2 id="next-title" class="cs-block-title">What I'd do next</h2>
+      </div>
+      <div class="cs-two-col">
+        <div>
+          <h3 class="cs-framework-title">An AI-powered suggestion layer</h3>
+          <p class="cs-body-para">The dashboard surfaces what happened. The natural evolution is a layer that tells you what to do about it.</p>
+          <p class="cs-body-para">
+            An AI-powered suggestion model embedded in the dashboard could analyze individual usage patterns and surface tailored recommendations — flag an underutilized node, suggest consolidating two Uni networks, or alert before a client's credits run out. This shifts the product from a reporting tool to an optimization tool.
+          </p>
+          <p class="cs-body-para">
+            For Vendia, this creates a compounding business opportunity: clients who actively optimize their usage get more value from the platform, and the actionable insights drive deeper product engagement. The dashboard becomes a retention and expansion lever — not just a transparency feature.
+          </p>
+        </div>
+        <div class="cs-preview-card">
+          <span class="cs-preview-label">Opportunity areas</span>
+          <ul class="cs-preview-list">
+            <li><strong>Predictive credit alerts:</strong> Warn clients before they overshoot their monthly budget — not after the invoice arrives.</li>
+            <li><strong>Personalized optimization tips:</strong> Tailor recommendations to each client's engagement model — not a generic best-practice checklist.</li>
+            <li><strong>Actionable product insights:</strong> Identify underused features and growth opportunities — turning the dashboard into a PM tool as much as a user tool.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span class="footer-copy">Sushmidha Jawahar, Senior Product Designer</span>
+    <span class="footer-copy">2026</span>
+  </footer>
+
+  <script>
+    (function () {
+      var nav = document.getElementById('main-nav');
+      var hero = document.querySelector('.cs-hero-project');
+      var footer = document.querySelector('footer');
+      if (!nav) return;
+      function syncNav() {
+        var overFooter = footer && (function () {
+          var r = footer.getBoundingClientRect();
+          return r.top <= 60 && r.bottom > 60;
+        })();
+        var overDarkHero = hero && !hero.classList.contains('cs-hero-project--mauve') && (function () {
+          var r = hero.getBoundingClientRect();
+          return r.top <= 60 && r.bottom > 60;
+        })();
+        nav.classList.toggle('light', !!(overFooter || overDarkHero));
+      }
+      syncNav();
+      window.addEventListener('scroll', syncNav, { passive: true });
+      window.addEventListener('resize', syncNav);
+    })();
+  </script>
+  <script src="../auth.js"></script>
+</body>
+</html>

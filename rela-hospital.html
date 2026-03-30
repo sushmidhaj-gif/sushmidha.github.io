@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="case-study">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      try {
+        if (sessionStorage.getItem("portfolio_auth") === "1") return;
+      } catch (e) {}
+      document.documentElement.setAttribute("data-portfolio-gate", "on");
+    })();
+  </script>
+  <style>
+    html[data-portfolio-gate="on"] body > *:not(#portfolio-auth-gate) {
+      visibility: hidden !important;
+    }
+  </style>
+  <link rel="stylesheet" href="../auth.css" />
+  <title>Rela Hospital — Web experience &amp; patient portal | Sushmidha Jawahar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body class="case-study">
+
+  <nav id="main-nav" class="light">
+    <a href="../index.html#hero" class="nav-logo" aria-label="Sushmidha Jawahar, home">
+      <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="logo-circle" cx="21" cy="21" r="21" />
+        <text class="logo-text" x="21" y="21" dominant-baseline="central" text-anchor="middle"
+              font-family="'DM Sans', sans-serif" font-size="19.5" font-weight="700"
+              letter-spacing="-0.5">.sj</text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work-1">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="cs-hero-project cs-hero-project--brown">
+    <div class="cs-hero-inner">
+      <div class="cs-hero-copy">
+        <div class="ws-num">03 / 03</div>
+        <div class="ws-label">Healthcare · B2C product</div>
+        <h1 class="ws-title">Rela Hospital —<br />Web experience &amp; patient portal</h1>
+        <p class="ws-desc">Rebuilt a failing hospital website from the ground up — turning an 87% drop-off rate into a 3.87× traffic surge and an 87% lift in online patient conversions.</p>
+        <div class="ws-tags">
+          <span class="ws-tag">Healthcare UX</span>
+          <span class="ws-tag">Information architecture</span>
+          <span class="ws-tag">Patient portal</span>
+          <span class="ws-tag">Content strategy</span>
+          <span class="ws-tag">Conversion optimization</span>
+        </div>
+        <a class="cs-back" href="../index.html#work-3">← All work</a>
+      </div>
+      <aside class="cs-meta" aria-label="Project details">
+        <div class="cs-meta-item">
+          <label>Role</label>
+          <p>Lead UX designer (solo)</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Timeline</label>
+          <p>Feb – Jul 2022 · 6 months</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Team</label>
+          <p>PM, SEO analyst, content writer, 2 developers</p>
+        </div>
+        <div class="cs-meta-item">
+          <label>Scope</label>
+          <p>Research · IA · journey mapping · wireframes · hi-fi mockups</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div class="cs-body-shell">
+    <div class="cs-cover">
+      <div class="cs-cover-frame">
+        <img src="https://static.wixstatic.com/media/3f58e7_2133bd7c20614e17b77a2429078bcc91~mv2.png" alt="Rela Hospital redesigned website — home and patient portal" width="1200" height="800" decoding="async" />
+      </div>
+      <div class="cs-cover-caption">
+        <span>Redesigned website — home page and patient portal</span>
+        <span>Rela Hospital · 2022</span>
+      </div>
+    </div>
+
+    <section class="cs-section-block" aria-labelledby="problem-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">01</span>
+        <h2 id="problem-title" class="cs-block-title">The problem</h2>
+      </div>
+      <div class="cs-two-col">
+        <div>
+          <p class="cs-body-para">
+            Rela Hospital's rapid growth had created a digital crisis. The website — built for a smaller institution — couldn't support the scale, services, or credibility the hospital had earned. Patients looking for doctors or departments couldn't find what they needed, and the trust signals patients depend on in healthcare simply weren't there.
+          </p>
+          <p class="cs-body-para">
+            The business was ready to digitize — appointment booking, lab tests, patient records — but the existing architecture couldn't hold any of it. The site was actively costing the hospital patients.
+          </p>
+          <figure class="cs-body-quote">
+            <blockquote>
+              <p class="cs-body-quote-text">“I forget what I was searching for every time I open the menu. Does the pulmonary department treat lungs or kidney?”</p>
+            </blockquote>
+            <figcaption class="cs-body-quote-attr">User interview participant</figcaption>
+          </figure>
+        </div>
+        <div class="cs-challenge-grid">
+          <article class="cs-challenge-card">
+            <h3 class="cs-ba-heading">Before</h3>
+            <ul class="cs-ba-list">
+              <li>87% of users dropped off when searching for a doctor or department</li>
+              <li>8 full-width homepage banners — crushing load time</li>
+              <li>Navigation was an uncategorized list of every hospital department</li>
+              <li>No appointment booking, no patient portal, no login</li>
+              <li>Widespread lack of trust — confirmed by 150+ survey responses</li>
+            </ul>
+          </article>
+          <article class="cs-challenge-card">
+            <h3 class="cs-ba-heading cs-ba-heading--after">After</h3>
+            <ul class="cs-ba-list cs-ba-list--after">
+              <li>87% boost in online patient conversions</li>
+              <li>3.87× overall website traffic increase</li>
+              <li>Self-serve appointment booking via authenticated patient portal</li>
+              <li>Navigation rebuilt around user intent, not hospital org structure</li>
+              <li>Trust signals, credentials, and doctor profiles front and center</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="research-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">02</span>
+        <h2 id="research-title" class="cs-block-title">Research &amp; discovery</h2>
+      </div>
+      <div class="cs-two-col">
+        <div>
+          <p class="cs-body-para">
+            Before designing anything, I needed to understand who was actually visiting the site and what they needed at that moment. I ran a website audit, usability studies, user interviews, stakeholder interviews, and a competitor analysis.
+          </p>
+          <p class="cs-body-para">
+            The most important insight: not all hospital website visitors are the same. A person in an emergency researches differently from someone doing weeks of research before a planned surgery. The existing site treated every visitor identically — and failed most of them.
+          </p>
+          <p class="cs-body-para">
+            I mapped three distinct user archetypes based on traffic data and intent, each requiring a fundamentally different information hierarchy and journey through the site.
+          </p>
+        </div>
+        <figure class="cs-inline-figure">
+          <img src="https://static.wixstatic.com/media/3f58e7_b1cc8248e3d2475bb176e7cbdc9a51bd~mv2.png" alt="Original navigation: uncategorized list of every department" width="800" height="600" decoding="async" />
+          <figcaption class="cs-inline-figure-caption">Original navigation — every department listed without categorization. Users had no way to orient themselves.</figcaption>
+        </figure>
+      </div>
+
+      <div class="cs-framework-grid" style="margin-top: clamp(28px, 4vw, 40px);">
+        <article class="cs-framework-card">
+          <h3 class="cs-framework-title">The rapid responder</h3>
+          <p class="cs-framework-text">A caretaker or patient in an active emergency. They're nearby, they're urgent, and they need to reach the right place fast. Every extra click costs them.</p>
+          <p class="cs-persona-pages-label">Primary pages</p>
+          <p class="cs-persona-pages">Doctor profiles → Appointment booking → Department pages</p>
+          <div class="cs-persona-stat">
+            <span class="cs-persona-stat-num">75%+</span>
+            <span class="cs-persona-stat-label">intent to visit the hospital</span>
+          </div>
+        </article>
+        <article class="cs-framework-card">
+          <h3 class="cs-framework-title">The diagnosis detective</h3>
+          <p class="cs-framework-text">Researching a diagnosis — their own or a family member's. They need credibility: doctor credentials, treatment detail, patient stories, and proof the hospital can handle their specific condition.</p>
+          <p class="cs-persona-pages-label">Primary pages</p>
+          <p class="cs-persona-pages">Treatments &amp; conditions → Doctor profiles → About / awards</p>
+          <div class="cs-persona-stat">
+            <span class="cs-persona-stat-num">&lt;30%</span>
+            <span class="cs-persona-stat-label">intent — the right content converts them</span>
+          </div>
+        </article>
+        <article class="cs-framework-card">
+          <h3 class="cs-framework-title">The wellness seeker</h3>
+          <p class="cs-framework-text">Health-conscious, proactively reading about symptoms, seasonal illness, and healthy living. Low conversion intent, but high volume — and a long-term brand-building opportunity.</p>
+          <p class="cs-persona-pages-label">Primary pages</p>
+          <p class="cs-persona-pages">Blogs → Clinical articles → Seasonal health content</p>
+          <div class="cs-persona-stat">
+            <span class="cs-persona-stat-num">&lt;10%</span>
+            <span class="cs-persona-stat-label">direct conversion — high SEO value</span>
+          </div>
+        </article>
+      </div>
+
+      <blockquote class="cs-pull-quote" style="margin-top: clamp(28px, 4vw, 40px);">
+        <p class="cs-pull-quote-label">Design challenge</p>
+        <p class="cs-pull-quote-text">“One website. Three completely different users with different urgency, different needs, and different trust thresholds. How do you design a single navigation and content system that works for all three — without overwhelming any of them?”</p>
+      </blockquote>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="pivots-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">03</span>
+        <h2 id="pivots-title" class="cs-block-title">Three pivots that shaped the design</h2>
+      </div>
+      <p class="cs-intro-line" style="margin-bottom: clamp(24px, 4vw, 32px);">
+        This wasn't a cosmetic refresh — the core architecture had to change. Three decisions had the highest impact on outcomes.
+      </p>
+
+      <div>
+        <span class="cs-pivot-label">Pivot 01</span>
+        <div class="cs-two-col">
+          <div>
+            <h3 class="cs-framework-title" style="margin-bottom: 12px;">Navigation rebuilt around intent, not org structure</h3>
+            <p class="cs-body-para">The old navigation was a raw dump of every hospital department — no hierarchy, no categorization, no empathy for how a patient actually thinks. Someone searching for a cardiologist shouldn't have to know what a cardiothoracic department is called internally.</p>
+            <p class="cs-body-para">I rebuilt the navigation around three user intents: <strong>find information</strong>, <strong>take action</strong>, and <strong>return to something</strong>. Departments were grouped by symptom and body system — not hospital org chart. CTAs were moved to the header and made persistent. The result was a menu that spoke patient language, not hospital administration language.</p>
+            <p class="cs-body-para cs-muted-note">This structural change alone was expected to significantly reduce customer support overhead for navigation-related queries — one of the top complaint categories before the redesign.</p>
+          </div>
+          <figure class="cs-inline-figure">
+            <img src="https://static.wixstatic.com/media/3f58e7_52b455f5be13476b83de07734321e13b~mv2.png" alt="New navigation information architecture diagram" width="800" height="600" decoding="async" />
+            <figcaption class="cs-inline-figure-caption">Rebuilt navigation IA — organized by user intent, not hospital org structure</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="cs-stack-divider">
+        <span class="cs-pivot-label">Pivot 02</span>
+        <div class="cs-two-col">
+          <figure class="cs-inline-figure">
+            <img src="https://static.wixstatic.com/media/3f58e7_00faf51d4a8841f9b35bbc9e062858d7~mv2.jpg" alt="Redesigned Rela Hospital homepage" width="800" height="560" decoding="async" />
+            <figcaption class="cs-inline-figure-caption">Redesigned homepage — trust signals and clear pathways replace banner overload</figcaption>
+          </figure>
+          <div>
+            <h3 class="cs-framework-title" style="margin-bottom: 12px;">Trust as a design material</h3>
+            <p class="cs-body-para">The research made one thing undeniable: 150+ survey responses showed a widespread lack of trust in the existing site experience. In healthcare, trust is not a nice-to-have — it's the conversion mechanism. Patients don't book appointments at hospitals they don't believe in.</p>
+            <p class="cs-body-para">I treated trust as a first-class design material throughout. Doctor profiles were elevated with credentials, experience, and patient-facing language. Accreditations, awards, and infrastructure were brought out of buried “About” pages and placed on high-traffic pages. The content tone shifted from institutional to human — from “Rela Hospital provides…” to “We are here for you.”</p>
+            <p class="cs-body-para">The 8-banner homepage was stripped back to a focused, fast-loading page with clear hierarchy — giving users a reason to stay and a path forward.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-stack-divider">
+        <span class="cs-pivot-label">Pivot 03</span>
+        <h3 class="cs-framework-title" style="margin-bottom: 16px;">Authenticated transactions — a new product layer</h3>
+        <div class="cs-two-col">
+          <div>
+            <p class="cs-body-para">The hospital's goal was to digitize operations — online appointments, lab test bookings, patient records. But putting transactions on a public website without authentication was both a trust risk and a data risk. I designed a patient portal with a login layer that gated all transactional features.</p>
+            <p class="cs-body-para">This wasn't just security infrastructure — it was a UX decision. A logged-in user gets their data remembered, their appointment history surfaced, and a richer visual experience. It gave returning patients a reason to come back to the website rather than calling reception. And it gave the hospital a CRM foundation: a relationship with each patient that extended beyond a single visit.</p>
+          </div>
+          <div>
+            <p class="cs-body-para">Form design across the entire site was also unified — every form followed the same layout pattern, reducing cognitive load as users moved from booking an appointment to scheduling a lab test. Consistency in forms directly signals institutional reliability, which was the very thing patients said they were missing.</p>
+            <div class="cs-img-pair">
+              <figure class="cs-inline-figure">
+                <img src="https://static.wixstatic.com/media/3f58e7_1182446b7de345f58a5ae94d965b55e4~mv2.jpg" alt="Appointment booking form" width="400" height="520" decoding="async" />
+              </figure>
+              <figure class="cs-inline-figure">
+                <img src="https://static.wixstatic.com/media/3f58e7_47060fd8d515479d980a576854ea2c1b~mv2.jpg" alt="Lab test booking form" width="400" height="520" decoding="async" />
+              </figure>
+            </div>
+            <p class="cs-inline-figure-caption" style="border: none; padding: 8px 0 0;">Unified form system — appointment booking and lab test flows share the same layout pattern</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="impact-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">04</span>
+        <h2 id="impact-title" class="cs-block-title">Business impact</h2>
+      </div>
+      <div class="cs-stat-grid">
+        <article class="cs-stat-card">
+          <span class="cs-stat-overline">Traffic growth</span>
+          <span class="cs-stat-num">3.87×</span>
+          <h3 class="cs-stat-heading">Overall website traffic</h3>
+          <p class="cs-stat-body">A near-quadrupling of site traffic — driven by rebuilt navigation, faster load times, and SEO-aligned content strategy that finally gave Rela's non-branded services the visibility they deserved.</p>
+        </article>
+        <article class="cs-stat-card">
+          <span class="cs-stat-overline">Patient conversions</span>
+          <span class="cs-stat-num">87%</span>
+          <h3 class="cs-stat-heading">Boost in web-based bookings</h3>
+          <p class="cs-stat-body">The patient portal moved appointment booking online for the first time — with authentication, saved data, and a streamlined journey that turned browsers into confirmed patients.</p>
+        </article>
+        <article class="cs-stat-card">
+          <span class="cs-stat-overline">Business target</span>
+          <span class="cs-stat-num">40%+</span>
+          <h3 class="cs-stat-heading">Conversion rate goal — exceeded</h3>
+          <p class="cs-stat-body">The client's stated goal was a 40% improvement in web conversion. The final design surpassed it by doubling the conversion improvement target.</p>
+        </article>
+      </div>
+      <div class="cs-two-col" style="margin-top: 14px;">
+        <article class="cs-stat-card cs-stat-card--light">
+          <span class="cs-stat-overline">Operational impact</span>
+          <span class="cs-stat-num cs-stat-symbol" aria-hidden="true">↓</span>
+          <h3 class="cs-stat-heading">Reduced support overhead</h3>
+          <p class="cs-stat-body">Self-serve navigation and a unified forms system dramatically reduced navigation-related support queries. The design replaced conversations that were previously handled by hospital reception and customer service.</p>
+        </article>
+        <article class="cs-stat-card cs-stat-card--light">
+          <span class="cs-stat-overline">Retention &amp; loyalty</span>
+          <span class="cs-stat-num cs-stat-symbol" aria-hidden="true">∞</span>
+          <h3 class="cs-stat-heading">A CRM foundation built into the design</h3>
+          <p class="cs-stat-body">The authenticated patient portal gave the hospital its first digital relationship with returning patients — remembered history, personalized experience, and a reason to return to the website between visits.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cs-section-block" aria-labelledby="reflection-title">
+      <div class="cs-block-header">
+        <span class="cs-block-num" aria-hidden="true">05</span>
+        <h2 id="reflection-title" class="cs-block-title">Reflections</h2>
+      </div>
+      <div class="cs-reflection-grid">
+        <div class="cs-reflection-item">
+          <h3 class="cs-reflection-heading">In healthcare, trust is the conversion mechanism</h3>
+          <p class="cs-reflection-text">You can't optimize your way to conversions on a hospital website if users don't believe in the institution. Every design decision — content tone, credential placement, form consistency — was ultimately a trust decision. Learning to design for trust as a primary outcome, not a secondary consideration, changed how I approached the entire project.</p>
+        </div>
+        <div class="cs-reflection-item">
+          <h3 class="cs-reflection-heading">One site can't be one experience</h3>
+          <p class="cs-reflection-text">The biggest unlock in this project was building user archetypes around intent and urgency — not just demographics. Designing for a rapid responder and a wellness seeker simultaneously required a navigation and content system flexible enough for both. That tension made the final architecture sharper and more useful than anything I would have designed for one user type alone.</p>
+        </div>
+        <div class="cs-reflection-item">
+          <h3 class="cs-reflection-heading">Persuasion is a design skill</h3>
+          <p class="cs-reflection-text">Redesigning a live hospital website meant challenging decisions that stakeholders had strong opinions about. Getting buy-in for the navigation overhaul, the content tone shift, and the decision to gate transactions behind authentication all required communicating design rationale in terms of patient outcomes and business goals — not design principles. The research data made those conversations possible.</p>
+        </div>
+        <div class="cs-reflection-item">
+          <h3 class="cs-reflection-heading">Structured research unlocks scale</h3>
+          <p class="cs-reflection-text">On a project this large — touching navigation, content, transaction flows, and a new product layer — structured research wasn't a phase, it was the load-bearing foundation. Every significant design decision traced back to a specific finding. That discipline is what made it possible to move fast and confidently on a project with this much scope.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span class="footer-copy">Sushmidha Jawahar, Senior Product Designer</span>
+    <span class="footer-copy">2026</span>
+  </footer>
+
+  <script>
+    (function () {
+      var nav = document.getElementById('main-nav');
+      var hero = document.querySelector('.cs-hero-project');
+      var footer = document.querySelector('footer');
+      if (!nav) return;
+      function syncNav() {
+        var els = [hero, footer].filter(Boolean);
+        var overDark = els.some(function (el) {
+          var r = el.getBoundingClientRect();
+          return r.top <= 60 && r.bottom > 60;
+        });
+        nav.classList.toggle('light', overDark);
+      }
+      syncNav();
+      window.addEventListener('scroll', syncNav, { passive: true });
+      window.addEventListener('resize', syncNav);
+    })();
+  </script>
+  <script src="../auth.js"></script>
+</body>
+</html>
