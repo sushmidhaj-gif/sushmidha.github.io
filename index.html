@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      try {
+        if (sessionStorage.getItem("portfolio_auth") === "1") return;
+      } catch (e) {}
+      document.documentElement.setAttribute("data-portfolio-gate", "on");
+    })();
+  </script>
+  <style>
+    html[data-portfolio-gate="on"] body > *:not(#portfolio-auth-gate) {
+      visibility: hidden !important;
+    }
+  </style>
+  <link rel="stylesheet" href="auth.css" />
+  <title>Sushmidha Jawahar — Senior Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300;1,9..40,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────────── -->
+  <nav id="main-nav">
+    <!--
+      Logo: dark blue circle + blush .sj on light sections; nav.light inverts for dark bgs
+    -->
+    <a href="#hero" class="nav-logo" aria-label="Sushmidha Jawahar — home">
+      <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle class="logo-circle" cx="21" cy="21" r="21"/>
+        <text class="logo-text" x="21" y="21"
+              dominant-baseline="central" text-anchor="middle"
+              font-family="'DM Sans', sans-serif"
+              font-size="19.5" font-weight="700"
+              letter-spacing="-0.5">.sj</text>
+      </svg>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#work-1">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-eyebrow">Sushmidha Jawahar &nbsp;·&nbsp; Senior Product Designer</div>
+
+    <!--
+      Order 1→5, then 6 = duplicate of 1. Each slide is min-height = viewport so the next phrase never peeks below shorter lines.
+    -->
+    <div class="hero-rot-block" id="rotBlock" aria-live="polite" aria-atomic="true">
+      <div class="hero-rot-track" id="rotTrack">
+
+        <p class="rot-sentence" id="rot-0">
+          <span class="rs">I own it end to end, from </span><span class="ri">early explorations</span><span class="rs"> to </span><span class="ri">scaleable solutions</span>
+        </p>
+        <p class="rot-sentence">
+          <span class="rs">I turn </span><span class="ri">complex systems</span><span class="rs"> into thoughtful, </span><span class="ri">felt experiences</span>
+        </p>
+        <p class="rot-sentence">
+          <span class="rs">I design experiences </span><span class="ri">connecting strategy</span><span class="rs">, </span><span class="ri">service</span><span class="rs">, and </span><span class="ri">spaces between</span>
+        </p>
+        <p class="rot-sentence">
+          <span class="rs">I work across teams and tools, </span><span class="ri">aligning systems with strategy at scale</span>
+        </p>
+        <p class="rot-sentence">
+          <span class="rs">I am an </span><span class="ri">Architect</span><span class="rs"> turned </span><span class="ri">Product Designer</span><span class="rs">, trained to think in systems</span>
+        </p>
+
+      </div>
+    </div>
+
+    <div class="hero-desc-block reveal">
+      <p class="hero-desc">Product Designer with <strong>6+ years of experience</strong></p>
+      <p class="hero-desc">Currently on the <strong>Agent Platform Team @ Highspot</strong></p>
+    </div>
+
+    <div class="hero-cta reveal">
+      <a href="#work-1" class="btn-navy">View my work →</a>
+      <a href="#contact" class="btn-ghost">Get in touch</a>
+    </div>
+
+    <span class="hero-year">© 2026</span>
+    <div class="hero-scroll-hint">Scroll</div>
+  </section>
+
+  <!-- ─── PROJECT 01 — Navy ────────────────────────── -->
+  <div class="work-slide" id="work-1">
+    <div class="ws-inner">
+      <div class="ws-text">
+        <div class="ws-num">01 / 03</div>
+        <div class="ws-label">Sales enablement · B2B SaaS</div>
+        <div class="ws-title">Highspot —<br>Agent Center</div>
+        <p class="ws-desc">Led end-to-end UX for Highspot's Agent Platform. Owned the interaction framework adopted across 8 product teams, and created a new design language for agentic expression on top of the existing design system. Scaled to 28 agentic scenarios across the platform.</p>
+        <div class="ws-tags">
+          <span class="ws-tag">Design System</span>
+          <span class="ws-tag">0 to 1 Design</span>
+          <span class="ws-tag">Web &amp; Mobile</span>
+          <span class="ws-tag">Framework</span>
+        </div>
+        <a href="work/highspot-agent-center.html" class="ws-link">View case study →</a>
+      </div>
+      <div class="ws-visual">
+        <div class="ws-device ws-device--screen">
+          <img src="images/agent-center.svg" alt="Highspot Agent Center interface" class="ws-screen-img" width="946" height="672" decoding="async" />
+        </div>
+      </div>
+    </div>
+    <div class="ws-counter">01 — Agent Center</div>
+  </div>
+
+  <!-- Nova (teal) slide temporarily removed; restore as id="work-2" and renumber Vendia/Rela to 3/4 when adding back.
+  <div class="work-slide" id="work-2">
+    <div class="ws-inner">
+      <div class="ws-text">
+        <div class="ws-num">02 / 04</div>
+        <div class="ws-label">B2B SaaS</div>
+        <div class="ws-title">Nova —<br>Analytics Dashboard</div>
+        <p class="ws-desc">End-to-end design of a data analytics platform, building a scalable design system adopted across 4 product teams.</p>
+        <div class="ws-tags">
+          <span class="ws-tag">UX Design</span>
+          <span class="ws-tag">Design System</span>
+          <span class="ws-tag">Web</span>
+        </div>
+        <a href="#" class="ws-link">View case study →</a>
+      </div>
+      <div class="ws-visual">
+        <div class="ws-device" style="width:300px;height:360px;border-radius:16px;">
+          <div class="ws-bar w80"></div>
+          <div class="ws-bar w40"></div>
+          <div class="ws-block"></div>
+          <div class="ws-row">
+            <div class="ws-block"></div>
+            <div class="ws-block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ws-counter">02 — Nova</div>
+  </div>
+  -->
+
+  <!-- ─── PROJECT 02 — Mauve (was 03) ───────────────── -->
+  <div class="work-slide" id="work-2">
+    <div class="ws-inner">
+      <div class="ws-text">
+        <div class="ws-num">02 / 03</div>
+        <div class="ws-label">Data management w/ blockchain · B2B SaaS</div>
+        <div class="ws-title">Vendia —<br>Usage Dashboards</div>
+        <p class="ws-desc">Owned Vendia Share's consumption and billing dashboards that gave 100% usage visibility for customers. Saved $250K in implementation costs and freed 80% of the solution architect's time from data explanation.</p>
+        <div class="ws-tags">
+          <span class="ws-tag">Dashboards</span>
+          <span class="ws-tag">Data visualization</span>
+          <span class="ws-tag">0 to 1 Design</span>
+        </div>
+        <a href="work/vendia-usage-dashboards.html" class="ws-link">View case study →</a>
+      </div>
+      <div class="ws-visual">
+        <div class="ws-device ws-device--vendia-stack" role="img" aria-label="Vendia usage dashboard behind billing dashboard">
+          <div class="ws-vendia-stack-inner">
+            <img src="images/usage-dashboard.svg" alt="" class="ws-vendia-img ws-vendia-img--usage" width="863" height="616" decoding="async" aria-hidden="true" />
+            <img src="images/billing-dashboard.svg" alt="" class="ws-vendia-img ws-vendia-img--billing" width="861" height="615" decoding="async" aria-hidden="true" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ws-counter">02 — Usage Dashboards</div>
+  </div>
+
+  <!-- ─── PROJECT 03 — Brown (was 04) ───────────────── -->
+  <div class="work-slide" id="work-3">
+    <div class="ws-inner">
+      <div class="ws-text">
+        <div class="ws-num">03 / 03</div>
+        <div class="ws-label">Healthcare · B2C product</div>
+        <div class="ws-title">Rela Hospital —<br>Patient Portal</div>
+        <p class="ws-desc">Overhauled patient experience and created the online portal that enhanced customer touch points by 200×. Improved website and portal navigation, resulting in a 71.4% reduction in customer support overhead and significant cost savings for the team.</p>
+        <div class="ws-tags">
+          <span class="ws-tag">Devices</span>
+          <span class="ws-tag">Design Patterns</span>
+          <span class="ws-tag">SEO Optimization</span>
+          <span class="ws-tag">Healthcare UX</span>
+        </div>
+        <a href="work/rela-hospital.html" class="ws-link">View case study →</a>
+      </div>
+      <div class="ws-visual">
+        <div class="ws-device ws-device--screen">
+          <img src="images/rela-patient-portal.svg" alt="Rela Hospital patient portal on desktop and mobile" class="ws-screen-img" width="959" height="610" decoding="async" />
+        </div>
+      </div>
+    </div>
+    <div class="ws-counter">03 — Patient Portal</div>
+  </div>
+
+  <!-- ─── ABOUT ─────────────────────────────────────── -->
+  <section id="about">
+    <div class="about-left">
+      <div class="section-label reveal">About me</div>
+      <h2 class="about-heading reveal">I make the<br><em>complex</em><br>feel simple.</h2>
+      <p class="about-body reveal">
+        With 6+ years designing across startups and scale-ups, I bring a systems-thinking approach to every project.
+        I believe great design lives in the details — the transitions, the microcopy, the moments users don't notice because everything just works.
+      </p>
+    </div>
+
+    <!-- Skills: 1 col on wide desktop; 2 cols when viewport ≤900px (see .skills-grid) -->
+    <div class="about-right reveal">
+      <ul class="skills-grid">
+        <li class="skill-item"><span>Agentic UX &amp; Human In the Loop</span><div class="skill-dot"></div></li>
+        <li class="skill-item"><span>UX Strategy &amp; Service Design</span><div class="skill-dot"></div></li>
+        <li class="skill-item"><span>UX Research &amp; Usability Testing</span><div class="skill-dot"></div></li>
+        <li class="skill-item"><span>Platform &amp; Admin UX</span><div class="skill-dot"></div></li>
+        <li class="skill-item"><span>Vibe Coding &amp; Prototyping</span><div class="skill-dot"></div></li>
+        <li class="skill-item"><span>Design Systems &amp; Frameworks</span><div class="skill-dot"></div></li>
+        <li class="skill-item"><span>Front-end Fundamentals</span><div class="skill-dot"></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─── REFERENCES (section label "References", removed from nav) ── -->
+  <section id="process">
+    <div class="section-label reveal">References</div>
+
+    <div class="testimonials-grid reveal">
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">She has a natural ability to make sense of messy, ambiguous spaces and turn them into elegant, user-centered experiences. This was especially evident during Highspot’s transformation to an agentic platform. She is a fantastic collaborator across product, engineering, and design.</p>
+        <div class="testimonial-author">
+          <span class="testimonial-name">Erik Snead</span>
+          <span class="testimonial-role">Director, Product Design, Highspot</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">Her architecture background means deep design judgment—she helped us deliver simple, aesthetically appealing solutions clients loved. You can trust her with timelines, and that’s something hard to find in a designer. If you’re having her on your team, you have a rockstar.</p>
+        <div class="testimonial-author">
+          <span class="testimonial-name">Senthil Natarajan RM</span>
+          <span class="testimonial-role">Program Manager, Firebrand Labs</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">She combines creativity with technology and asks great questions across the client’s business—probing details, shaping UI/UX, and focusing on the right implementation workflow. She will be a great asset for any organisation; I highly recommend her candidature for future employers and partners.</p>
+        <div class="testimonial-author">
+          <span class="testimonial-name">Aashish Nanavati</span>
+          <span class="testimonial-role">Client, Rela Hospital</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="references-cta reveal">
+      <a href="https://www.linkedin.com/in/sushmidha-jawahar/" class="btn-blush" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-label reveal">Let's talk</div>
+    <h2 class="contact-heading reveal">Reach out to me at</h2>
+    <a href="mailto:sushmidha.j@gmail.com" class="contact-email reveal">sushmidha.j@gmail.com</a>
+    <div class="socials reveal">
+      <a href="#" class="btn-blush">Resume</a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────── -->
+  <footer>
+    <span class="footer-copy">Sushmidha Jawahar — Senior Product Designer</span>
+    <span class="footer-copy">2026</span>
+  </footer>
+
+  <script>
+    // ── Reveal on scroll
+    const rObs = new IntersectionObserver(es=>{
+      es.forEach((e,i)=>{ if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*70); });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(el=>rObs.observe(el));
+
+    // ── Nav colour switch
+    const nav = document.getElementById('main-nav');
+    const darkEls = document.querySelectorAll('.work-slide, #process, footer');
+    const nObs = new IntersectionObserver(()=>{
+      const dark = [...darkEls].some(s=>{ const r=s.getBoundingClientRect(); return r.top<=60&&r.bottom>60; });
+      nav.classList.toggle('light', dark);
+    },{threshold:[0,0.1,0.5,1]});
+    darkEls.forEach(s=>nObs.observe(s));
+
+    // ── Work slides snap
+    document.querySelectorAll('.work-slide').forEach(el=>{ el.style.scrollSnapAlign='start'; });
+
+    // ── Hero rotating sentences — forward-only: 1→2→3→4→5→6 (clone of 1)→2→3…
+    (function(){
+      const block = document.getElementById('rotBlock');
+      const track = document.getElementById('rotTrack');
+      const origSentences = Array.from(track.querySelectorAll('.rot-sentence'));
+      const N = origSentences.length; // number of real slides; clone lives at index N
+
+      const clone = origSentences[0].cloneNode(true);
+      clone.setAttribute('aria-hidden','true');
+      clone.removeAttribute('id');
+      track.appendChild(clone);
+
+      const allSentences = Array.from(track.querySelectorAll('.rot-sentence'));
+
+      let idx = 0; // 0..N-1 real slides, or N while showing clone (slide 6)
+      let animating = false;
+
+      function twoLineMinHeight(){
+        const w = block.offsetWidth;
+        if(!w) return 0;
+        const probe = document.createElement('p');
+        probe.className = 'rot-sentence';
+        probe.setAttribute('aria-hidden','true');
+        probe.style.cssText = 'position:absolute;left:-9999px;top:0;width:'+w+'px;visibility:hidden;pointer-events:none;margin:0';
+        probe.innerHTML = '<span class="ri">Mg</span><br><span class="ri">Mg</span>';
+        document.body.appendChild(probe);
+        const h = probe.getBoundingClientRect().height;
+        document.body.removeChild(probe);
+        return h;
+      }
+
+      function rotBlockFixedHeight(){
+        allSentences.forEach(el=>{ el.style.minHeight = ''; });
+        block.offsetHeight;
+        const min2 = twoLineMinHeight();
+        let m = min2;
+        for(let j=0; j<allSentences.length; j++){
+          const h = allSentences[j].getBoundingClientRect().height;
+          if(h > m) m = h;
+        }
+        return m || 60;
+      }
+
+      function applyRotBlockHeight(){
+        const h = rotBlockFixedHeight();
+        block.style.height = h + 'px';
+        allSentences.forEach(el=>{ el.style.minHeight = h + 'px'; });
+      }
+
+      function offsetTop(i){
+        let sum = 0;
+        for(let j=0; j<i; j++) sum += allSentences[j].getBoundingClientRect().height;
+        return sum;
+      }
+
+      function syncAria(){
+        origSentences.forEach(p=>p.setAttribute('aria-hidden','true'));
+        clone.setAttribute('aria-hidden','true');
+        if(idx < N) origSentences[idx].setAttribute('aria-hidden','false');
+        else clone.setAttribute('aria-hidden','false');
+      }
+
+      function init(){
+        applyRotBlockHeight();
+        track.style.transition = 'none';
+        track.style.transform  = 'translateY(0)';
+        idx = 0;
+        syncAria();
+        requestAnimationFrame(()=>{
+          track.style.transition = 'transform 0.75s cubic-bezier(0.76,0,0.24,1)';
+        });
+      }
+
+      const DURATION_MS = 780;
+
+      function step(){
+        if(animating) return;
+        animating = true;
+
+        if(idx === N){
+          // End of slide 6: align to real slide 1 (invisible), then animate forward to slide 2
+          track.style.transition = 'none';
+          track.style.transform = 'translateY(0)';
+          requestAnimationFrame(()=>{
+            requestAnimationFrame(()=>{
+              track.style.transition = 'transform 0.75s cubic-bezier(0.76,0,0.24,1)';
+              track.style.transform = `translateY(-${offsetTop(1)}px)`;
+            });
+          });
+          setTimeout(()=>{
+            idx = 1;
+            syncAria();
+            animating = false;
+          }, DURATION_MS);
+          return;
+        }
+
+        const nextIdx = idx + 1;
+        track.style.transform = `translateY(-${offsetTop(nextIdx)}px)`;
+
+        setTimeout(()=>{
+          idx = nextIdx;
+          syncAria();
+          animating = false;
+        }, DURATION_MS);
+      }
+
+      document.fonts.ready.then(()=>{
+        init();
+        setInterval(step, 4000);
+      });
+
+      let rt;
+      window.addEventListener('resize',()=>{
+        clearTimeout(rt);
+        rt = setTimeout(()=>{
+          applyRotBlockHeight();
+          track.style.transition = 'none';
+          track.style.transform  = `translateY(-${offsetTop(idx)}px)`;
+          requestAnimationFrame(()=>{
+            track.style.transition = 'transform 0.75s cubic-bezier(0.76,0,0.24,1)';
+          });
+        },150);
+      });
+    })();
+  </script>
+  <script src="auth.js"></script>
+</body>
+</html>
